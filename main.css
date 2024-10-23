@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color:#FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 30px;
+  position: relative;
+  padding: 20px;
+  max-width: 1000px;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+  .people {
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+  }
+}
+
+person {
+  width: 200px;
+  height: 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  position: relative;
+  border-radius: 10px; 
+}
+
+.person .photo {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  overflow: hidden;
+  padding: 10px;
+}
+
+.person img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+
+
+.person .details {
+  margin-top: 10px;
+}
+
+.person .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #2b2b2b;  
+  text-decoration: none;
+}
+
+
+
+.extra {
+  display: none; 
+  margin-top: auto;
+  bottom: 10px; 
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.person:hover{
+  background-color: #EEEEEE;
+  width: 220px;
+  height: 287px;
+  border-radius: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.person:hover .photo {
+  width: 240px; 
+  height: 240px; 
+
+}
+
+.person:hover .extra {
+  display: block; 
+}
